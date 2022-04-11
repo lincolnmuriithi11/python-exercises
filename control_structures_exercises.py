@@ -11,7 +11,7 @@
 # how much the week's paycheck will be
 # write the python code that calculates the weekly paycheck. You get paid time and a half if you work more than 40 hours
 
-day_of_the_week = input("What day is today? ")
+day_of_the_week = input("What day is today? ") #add a while and list of days in order to limit inputs that people put
 days_of_the_week = day_of_the_week.lower()
 if days_of_the_week == "monday":
   print("Today is Monday")
@@ -51,7 +51,7 @@ while i <= 15:
   print(i)
   i += 1
 
-
+# whileloop starting at 2 ending at 100
 i = 0
 while 1 <= 100:
   print(i)
@@ -73,7 +73,19 @@ while i >= -10:
     break
   i -= 5
 
+# Create a while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
+i = 2
+while i < 1_000_000: # no need for a break because the answers are limited
+    print(i)
+    i **= 2
+#  2
+#  4
+#  16
+#  256
+#  65536
 
+
+# Write a loop that uses print to create the output shown below.
   i = 100
 while i >= 5:
   print(i)
@@ -82,9 +94,9 @@ while i >= 5:
   i -= 5
 
 
-# For Loops
+# b For Loops
 
-# Write some code that prompts the user for a number, then shows a multiplication table up through 10 for that number.
+# i. Write some code that prompts the user for a number, then shows a multiplication table up through 10 for that number.
 
 # For example, if the user enters 7, your program should output:
 num = int(input("enter a number? "))
@@ -93,7 +105,20 @@ num = int(input("enter a number? "))
 for i in range(1, 11):
    print(num, 'x',i,'=', num*i)
 
-# Create a for loop that uses print to create the output shown below.
+# 7 x 1 = 7
+# 7 x 2 = 14
+# 7 x 3 = 21
+# 7 x 4 = 28
+# 7 x 5 = 35
+# 7 x 6 = 42
+# 7 x 7 = 49
+# 7 x 8 = 56
+# 7 x 9 = 63
+# 7 x 10 = 70
+
+
+
+# ii. Create a for loop that uses print to create the output shown below.
 for i in range(1,10):
   print(int(str(i) * i))
 # also a possible answer
@@ -103,12 +128,29 @@ for i in range(1,10):
 #           print(i, end="")
 #     print()
 
+# 1
+# 22
+# 333
+# 4444
+# 55555
+# 666666
+# 7777777
+# 88888888
+# 999999999
 
 
 
-# Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input. (Hint: use the isdigit method on strings to determine this). Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
-Your output should look like this:
+
+
+# c. Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input. (Hint: use the isdigit method on strings to determine this). Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
+# Your output should look like this:
 num = input("Please pick a number ")
+while True:
+  if (num.isdigit() == False or int(num) > 50 or int (num)<1 or int(num)% 2 ==0):
+    print ('Invalid input')
+    num = input("Please enter another number ")
+  else: 
+    break
 num_int = int(num)
 
 for x in range(1, 50, 2):
@@ -116,6 +158,16 @@ for x in range(1, 50, 2):
         print('Yikes! skipping number: ', x)
     else:
         print('Here is an odd number: ', x)
+
+# Here is an odd number: 1
+# Here is an odd number: 3
+# Here is an odd number: 5
+# Here is an odd number: 7
+# Here is an odd number: 9
+# Here is an odd number: 11
+# Here is an odd number: 13
+# Here is an odd number: 15
+# Here is an odd number: 17
 
 
 
@@ -129,7 +181,7 @@ for x in range(1, 50, 2):
 # For the multiples of five print "Buzz".
 # For numbers which are multiples of both three and five print "FizzBuzz".
 for num in range(1,101):
-  if num % 3 == 0 and num % 5 ==0:
+  if num % 3 == 0 and num % 5 ==0: #the key is the order of how you arrange the order of operation
     print("FizzBuzz")
   elif num % 3 == 0:
     print("Fizz")
@@ -157,6 +209,19 @@ for x in range(1, num_int + 1):
     num_cubed = x ** 3
     print(f'{x: <6} | {num_squared: ^7} | {num_cubed: 5}')
 
+# What number would you like to go up to? 5
+
+# Here is your table!
+
+# number | squared | cubed
+# ------ | ------- | -----
+# 1      | 1       | 1
+# 2      | 4       | 8
+# 3      | 9       | 27
+# 4      | 16      | 64
+# 5      | 25      | 125
+
+
 
 
 # Convert given number grades into letter grades.
@@ -167,20 +232,31 @@ for x in range(1, num_int + 1):
 # Assume that the user will enter valid integers for the grades.
 # The application should only continue if the user agrees to.
 # Grade Ranges:
-class_grade = int(input("What is your numerical grade? "))
 
-if class_grade in range(0,60):
-  class_grade = "F"
-elif class_grade in range (60,67):
-  class_grade = "D"
-elif class_grade in range (67,80):
-  class_grade = "C"
-elif class_grade in range (80,88):
-  class_grade = "B"
-else:
-  class_grade = "A"
-print(class_grade)
+while True:
+  class_grade = int(input("What is your numerical grade? "))
+
+  if class_grade in range(0,60):
+    class_grade = "F"
+  elif class_grade in range (60,67):
+    class_grade = "D"
+  elif class_grade in range (67,80):
+    class_grade = "C"
+  elif class_grade in range (80,88):
+    class_grade = "B"
+  else:
+    class_grade = "A"
+  print(class_grade)
+
+  choice = input("If you want to continue, please enter yes or y: ")
+  if choice.lower() in ['yes', 'y']:
+    
+    continue 
+  else:
+    break
+
  
   
+
 
 
