@@ -1,6 +1,6 @@
 #1. Define a function named is_two. It should accept one input and return True if the passed input is either the number or the string 2, False otherwise.
 
-x = input("insert a number ")
+# x = input("insert a number ")
 def is_two(x):    
   return x == 2 or x == "2"
 
@@ -119,3 +119,32 @@ def normalize_name(string):
     return new_output
 
 
+# somenums = [1,2,3,4,5]
+# for i, num in enumerate(somenums):
+#     print('index: ', i)
+#     print(num)
+# index:  0
+# 1
+# index:  1
+# 2
+# index:  2
+# 3
+# index:  3
+# 4
+# index:  4
+# 5
+# sum(somenums[:1 + 1])
+# 3
+# # Exercise 11
+# # Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
+# # cumulative_sum([1, 1, 1]) returns [1, 2, 3]
+# # cumulative_sum([1, 2, 3, 4]) returns [1, 3, 6, 10]
+
+# def cumulative_sum(somenums):
+#     output = []
+#     for i, num in enumerate(somenums):
+#         sum_so_far = sum(somenums[:i + 1])
+#         output.append(sum_so_far)
+#     return output
+
+    

@@ -255,6 +255,51 @@ while True:
   else:
     break
 
+# Create a list of dictionaries where each dictionary represents a book that you have read. Each dictionary in the list should have the keys title, author, and genre. Loop through the list and print out information about each book.
+
+# Prompt the user to enter a genre, then loop through your books list and print out the titles of all the books in that genre.
+
+# bookshelf = [
+#     {'title': 'Annihilation',
+#     'author': 'Jeff Vandermeer',
+#     'genre': 'Science Fiction'},
+#     {'title': 'Octopus Pie',
+#     'author': 'Maredeth Gran',
+#     'genre': 'Comic'},
+#     {'title': 'Cabin At the End of the World',
+#     'author': 'Paul Tremblay',
+#     'genre': 'Horror'},
+#     {'title': 'Severance',
+#     'author': 'Ling Ma',
+#     'genre': 'Science Fiction'},
+# ]
+# # if ',' is in book['genre']:
+# #     book['genre'].split(',')
+# # if type(book['genre']) 
+
+# for key in book:
+#     print(key, book[key])
+# for book in bookshelf:
+#     print('we are living in a single dictionary here')
+#     [print(key, ': ', book[key]) for key in book]
+#     print('------')
+
+#     picked_genre = input('Please pick a genre and I will return the titles of that genre on shelf. \n')
+# Please pick a genre and I will return the titles of that genre on shelf. 
+# comedy
+# # start with an empty list,
+# # add the book dictionary to the list if it is of the correct genre
+# # include a check for a still empty list to indicate via message that there are no 
+# # books of that genre
+# matches = []
+# for book in bookshelf:
+#     if book['genre'].lower() == picked_genre.lower():
+#         matches.append(book['title'])
+# if matches == []:
+#     print('no books in that genre available. please check back later')
+# else:
+#     print(f'I have the following titles in the genre {picked_genre}')
+#     [print(match) for match in matches]
  
   
 
